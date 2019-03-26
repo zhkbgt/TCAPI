@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'TCAPI'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of TCAPI.'
+  s.summary          = ' TCAPI summary'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+TODO: Add long description of the pod here. TCAPI
                        DESC
 
   s.homepage         = 'https://github.com/zhkbgt/TCAPI'
@@ -28,15 +28,20 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/zhkbgt/TCAPI.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
-  s.source_files = 'TCAPI/Classes/**/*'
-  
+#  s.source_files = 'TCAPI/Classes/**/*'
+   s.resources = "TCAPI/Assets/*"
+ 
   # s.resource_bundles = {
   #   'TCAPI' => ['TCAPI/Assets/*.png']
   # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
+  s.vendored_frameworks = 'TCAPI.framework'
+  s.libraries = 'icucore', 'c++', 'bsm', 'z', 'bz2', 'resolv'
+  s.frameworks = 'UIKit', 'MapKit', 'WebKit'
+  s.dependency 'TIJK'
+  
+# s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 end

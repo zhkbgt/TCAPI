@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TCAPI'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = ' TCAPI summary'
 
 # This description is used to generate tags and improve search results.
@@ -39,7 +39,7 @@ TODO: Add long description of the pod here. TCAPI
   s.vendored_frameworks = 'TCAPI.framework'
   s.libraries = 'icucore', 'c++', 'bsm', 'z', 'bz2', 'resolv'
   s.frameworks = 'UIKit', 'MapKit', 'WebKit'
-  s.dependency 'TIJK'
+  s.dependency 'IJKMediaFramework'
   
 # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
